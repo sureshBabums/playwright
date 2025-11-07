@@ -3,19 +3,19 @@ pipeline{
     stages{
         stage('install playwright'){
             steps{
-                sh'''
+                bat'''
                 npx playwright test
                 '''
             }
         }
         stage('help'){
             steps{
-                sh 'npx playwright test --help'
+                bat 'npx playwright test --help'
             }
         }
         stage('test'){
             steps{
-                sh '''
+                bat '''
                 npx playwright test --list
                 npx playwright test
                 '''
