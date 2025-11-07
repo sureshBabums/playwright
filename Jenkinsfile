@@ -14,7 +14,7 @@ pipeline{
                 sh 'npx playwright test --help'
             }
         }
-        steps('test'){
+        stage('test'){
             steps{
                 sh '''
                 npx playwright test --list
